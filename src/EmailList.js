@@ -79,12 +79,6 @@ function EmailList() {
             time={new Date(timestamp?.seconds * 1000).toUTCString()}
           />
         ))}
-        <EmailRow
-          title="iMessage"
-          subject="Hey... Babe."
-          description="This is a gesture"
-          time="1:00am"
-        />
       </div>
     </div>
   );
