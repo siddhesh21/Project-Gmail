@@ -9,23 +9,23 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import PersonIcon from "@material-ui/icons/Person";
 import DuoIcon from "@material-ui/icons/Duo";
 import PhoneIcon from "@material-ui/icons/Phone";
-
 import SidebarOption from "./SidebarOption";
 import "./Sidebar.css";
-// import AddIcon from "@material-ui/icons/Add";
+import { useDispatch } from "react-redux";
+import { openSendMessage } from "./features/mailSlice";
 
 function Sidebar() {
+  const dispatch = useDispatch();
   return (
     <div className="SidebarButton">
       <Button
         className="sidebar__compose"
+        onClick={() => dispatch(openSendMessage())}
         startIcon={
           <img
             src="https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png"
             alt=""
           />
-          //   <AddIcon fontSize="large" className="sidebar__compose">
-          //   </AddIcon>
         }
       >
         Compose
